@@ -10,6 +10,7 @@ class TweetsApp
     message = gets.chomp
 
     tweet = Tweet.new({'username' => username, 'message' => message})
+    tweet.save
 
     tweets = Tweet.all
     render(tweets)
