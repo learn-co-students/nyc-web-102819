@@ -1,0 +1,19 @@
+require_relative './config/environment'
+require 'sinatra/activerecord/rake' 
+
+desc "Start our app console"
+task :console do
+  Pry.start
+end
+
+namespace :greetings do
+  desc "Salutation" 
+  task :say_hi do 
+    puts "hey there"
+  end
+
+  desc "goodby"
+  task :say_bye do  
+    puts "goodbye"
+  end
+end
