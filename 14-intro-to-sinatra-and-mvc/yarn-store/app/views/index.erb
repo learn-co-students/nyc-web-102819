@@ -1,0 +1,7 @@
+<h1>Yo. Here are ya skeinz 🧶</h1>
+
+<ul>
+  <% @skeins.each do |skein| %>
+    <li><a href="skeins/<%= skein.id %>"><%= skein.colorway %></a></li`>
+  <% end%>
+</ul>
