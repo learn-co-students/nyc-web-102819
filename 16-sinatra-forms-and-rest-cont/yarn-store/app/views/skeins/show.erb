@@ -1,0 +1,12 @@
+<h1>Ya show page for <%= @skein.colorway %></h1>
+
+<h2>Material: <%= @skein.material %></h2>
+<h3>Gauge: <%= @skein.gauge %></h3>
+<p><strong>Length: <%= @skein.length %> yds</strong></p>
+
+<a href="/skeins/<%= @skein.id %>/edit">Edit Ya Skein ⏱</a>
+
+<form action="/skeins/<%= @skein.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit", value="🧟‍♀️ Delete ya Skein 🧶">
+</form>

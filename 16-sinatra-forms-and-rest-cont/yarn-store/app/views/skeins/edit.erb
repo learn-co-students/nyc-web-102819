@@ -1,0 +1,18 @@
+<h1>🕯Edit ya skeinz: <%= @skein.colorway %> 🐌</h1>
+
+<form action="/skeins/<%= @skein.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="colorway">Colorway: </label>
+  <input type="text" name="skein[colorway]" value="<%= @skein.colorway %>">
+  <br>
+  <label for="material">Material: </label>
+  <input type="text" name="skein[material]" value="<%= @skein.material %>">
+  <br>
+  <label for="length">Length: </label>
+  <input type="number" name="skein[length]" value="<%= @skein.length %>">
+  <br>
+  <label for="gauge">Gauge: </label>
+  <input type="text" name="skein[gauge]" value="<%= @skein.gauge %>">
+  <br>
+  <input type="submit", value="Update ya Skein 🧶">
+</form>
