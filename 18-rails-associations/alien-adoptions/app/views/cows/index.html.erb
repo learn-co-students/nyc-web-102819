@@ -1,0 +1,11 @@
+<h1>🐮Here are ya cowz. Moo. 🤠</h1>
+
+<% @cows.each do |cow| %>
+  <div>
+    <h3>Name: <%= cow.name %></h3>
+    <span>Spots: <%= cow.number_of_spots %></span>
+    <p style="color:Green;">Age: <%= cow.age %></p>
+  </div>
+  <hr>
+<% end %>
+
