@@ -1,0 +1,14 @@
+<h1>Update ya cow whose name is <%= @cow.name %>🍦</h1>
+
+<%= form_for(@cow) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :number_of_spots, "Spots" %>
+  <%= f.number_field :number_of_spots %>
+  <br>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  <br>
+  <%= f.submit %>
+<% end %>

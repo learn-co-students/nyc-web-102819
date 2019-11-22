@@ -1,0 +1,9 @@
+<h1>👽 Bleep Blop Bloop ALIEN  👾</h1>
+
+<% @aliens.each do |alien| %>
+  <h3><%= alien.name %></h3>
+  <p>Planet: <%= alien.planet %></p>
+  <p>Age: <%= alien.age %></p>
+  <%= button_to "❌ Destroy Alien ❌", { action: "delete", id: alien.id}, method: :delete  %>
+  <hr>
+<% end %>
