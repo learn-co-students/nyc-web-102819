@@ -1,1 +1,4 @@
-# nyc-web-102819
+# Rails Review
+
+
+* review whatever concepts students are struggling with
