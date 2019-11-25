@@ -1,0 +1,13 @@
+<h1>🧡Here's Ya Cow. It's name is <%= @cow.name %>🌄</h1>
+
+
+<h3>Spots: <%= @cow.number_of_spots %></h3>
+<h4>Age: <%= @cow.age %></h4>
+<h4>Alien: <%= @alien_name %></h4>
+
+<%= link_to 'Home', cows_path %>
+<%= link_to 'Edit', edit_cow_path(@cow) %>
+
+<%= button_to "Sell Cow", { action: "delete", id: @cow.id}, method: :delete  %>
+
+

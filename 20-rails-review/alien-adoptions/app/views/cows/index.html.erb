@@ -1,0 +1,13 @@
+<h1>🐮Here are ya cowz. Moo. 🤠</h1>
+
+<%= link_to 'Create a New Cow', new_cow_path %>
+
+<% @cows.each do |cow| %>
+  <div>
+    <h3>Name: <%= link_to cow.name, cow_path(cow) %></h3>
+    <span>Spots: <%= cow.number_of_spots %></span>
+    <p style="color:Green;">Age: <%= cow.age %></p>
+  </div>
+  <hr>
+<% end %>
+
