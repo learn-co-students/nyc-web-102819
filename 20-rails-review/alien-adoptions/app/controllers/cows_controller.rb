@@ -9,8 +9,14 @@ class CowsController < ApplicationController
   end
 
   def create
-    cow = Cow.create(cow_params)
-    redirect_to cow_path(cow)
+    cow = Cow.new(cow_params)
+
+    if cow.save
+      redirect_to cow_path(cow)
+    else
+      flash[:errors] = cow.errors.full_messages
+      redirect_to new_cow_path
+    end
   end
 
   def show

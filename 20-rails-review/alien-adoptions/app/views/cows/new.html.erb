@@ -1,5 +1,10 @@
 <h1>Create ya Cow 👠</h1>
 
+<% if flash[:errors] %>
+  <% flash[:errors].each do |message|%>
+    <p>❌ <%= message %></p>
+  <% end %>
+<% end %>
 
 <%= form_for(@cow) do |f| %>
   <%= f.label :name %>

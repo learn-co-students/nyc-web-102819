@@ -4744,3 +4744,934 @@ Processing by CowsController#show as HTML
 Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 5548)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" = ? LIMIT ?[0m  [["name", "bessy"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" = ? LIMIT ?[0m  [["name", "bessy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" = ? LIMIT ?[0m  [["name", "bessy"], ["LIMIT", 1]]
+  [1m[36mCow Create (0.5ms)[0m  [1m[32mINSERT INTO "cows" ("name", "number_of_spots", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bessy"], ["number_of_spots", 5], ["age", 5], ["created_at", "2019-11-25 15:09:12.375389"], ["updated_at", "2019-11-25 15:09:12.375389"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" = ? AND "cows"."id" != ? LIMIT ?[0m  [["name", "bessy"], ["id", 27], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Create (0.3ms)[0m  [1m[32mINSERT INTO "cows" ("number_of_spots", "age", "created_at", "updated_at", "alien_id") VALUES (?, ?, ?, ?, ?)[0m  [["number_of_spots", 6], ["age", 6], ["created_at", "2019-11-25 15:10:22.900467"], ["updated_at", "2019-11-25 15:10:22.900467"], ["alien_id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL AND "cows"."id" != ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.4ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cows" WHERE "cows"."id" = ?[0m  [["id", 28]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "billy"], ["LIMIT", 1]]
+  [1m[36mCow Create (0.4ms)[0m  [1m[32mINSERT INTO "cows" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "billy"], ["created_at", "2019-11-25 15:16:33.857154"], ["updated_at", "2019-11-25 15:16:33.857154"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "billy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "billy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "Billy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "Billy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2019-11-25 10:20:06 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 966)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 2538)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 10:20:11 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:14
+  Rendered cows/new.html.erb within layouts/application (Duration: 148.7ms | Allocations: 183962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 170.9ms | ActiveRecord: 1.2ms | Allocations: 197431)
+
+
+Started POST "/cows" for ::1 at 2019-11-25 10:20:22 -0500
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"nQHn4rVsj+z/WGaarBClb+y0XVSvMjVP7Dkaoy/i+n/AlWfgdpZm1g8NBMhHOXXb8rP6RcMNoiJyj/VnlroYBg==", "cow"=>{"name"=>"", "number_of_spots"=>"5", "age"=>"5", "alien_id"=>"15"}, "commit"=>"Create Cow"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:12:in `create'
+  [1m[36mCow Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:12:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 4421)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cows", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/cows_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/05cd1e7b3e13848fa30a659efd220b53" for ::1 at 2019-11-25 10:20:48 -0500
+Started PUT "/__web_console/repl_sessions/05cd1e7b3e13848fa30a659efd220b53" for ::1 at 2019-11-25 10:20:48 -0500
+Started PUT "/__web_console/repl_sessions/05cd1e7b3e13848fa30a659efd220b53" for ::1 at 2019-11-25 10:21:15 -0500
+Started PUT "/__web_console/repl_sessions/05cd1e7b3e13848fa30a659efd220b53" for ::1 at 2019-11-25 10:21:17 -0500
+Started PUT "/__web_console/repl_sessions/05cd1e7b3e13848fa30a659efd220b53" for ::1 at 2019-11-25 10:21:19 -0500
+Started GET "/cows/new" for ::1 at 2019-11-25 10:24:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:14
+  Rendered cows/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 6125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 1.1ms | Allocations: 15917)
+
+
+Started POST "/cows" for ::1 at 2019-11-25 10:24:15 -0500
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"PDP0p4ElAgZK0odBtbSOBjMFHZWEYI4G3jjiE/Lu/U1hp3SlQt/rPLqH5RNenV6yLQK6hOhfGWtAjg3XS7YfNA==", "cow"=>{"name"=>"", "number_of_spots"=>"3", "age"=>"3", "alien_id"=>"12"}, "commit"=>"Create Cow"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+Redirected to http://localhost:3000/cows/new
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 3569)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 10:24:15 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:14
+  Rendered cows/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2423)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 6272)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 10:28:15 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 6466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 1.0ms | Allocations: 16881)
+
+
+Started POST "/cows" for ::1 at 2019-11-25 10:28:19 -0500
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"Cx4IPc1KUY4U9mNVpkJQeT4pu3gPKY0jkwDDs8Hf+LNWiog/DrC4tOSjAQdNa4DNIC4caWMWGk4Ntix3eIcayg==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+Redirected to http://localhost:3000/cows/new
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 3675)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 10:28:19 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2447)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6315)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 10:28:24 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.4ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2436)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 6289)
+
+
+Started POST "/cows" for ::1 at 2019-11-25 10:29:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"D9JpMfgijJ/UyQFxd9qQZh35Tn339WzSvu5KNJneUVRSRukzO9hlpSScYyOc80DSA/7pbJvK+78gWKXwIIazLQ==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  Rendering cows/new.html.erb within layouts/application
+  Rendered cows/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 801)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 9770)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     6:   <% end %>
+     7: <% end %>
+     8: 
+     9: <%= form_for(@cow) do |f| %>
+    10:   <%= f.label :name %>
+    11:   <%= f.text_field :name %>
+    12:   <br>
+  
+app/views/cows/new.html.erb:9
+app/controllers/cows_controller.rb:19:in `create'
+Started PUT "/__web_console/repl_sessions/9ac26e76e80e5bd00cf2b0764f0ef0da" for ::1 at 2019-11-25 10:29:12 -0500
+Started POST "/cows" for ::1 at 2019-11-25 10:29:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"D9JpMfgijJ/UyQFxd9qQZh35Tn339WzSvu5KNJneUVRSRukzO9hlpSScYyOc80DSA/7pbJvK+78gWKXwIIazLQ==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:14:in `create'
+  Rendering cows/new.html.erb within layouts/application
+  Rendered cows/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1827)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 10834)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    16:   <%= f.label :age %>
+    17:   <%= f.number_field :age %>
+    18:   <br>
+    19:   <%= f.collection_select :alien_id, @aliens, :id, :name, prompt: true %>
+    20:   <br>
+    21:   <%= f.submit %>
+    22: <% end %>
+  
+app/views/cows/new.html.erb:19
+app/views/cows/new.html.erb:9
+app/controllers/cows_controller.rb:19:in `create'
+Started POST "/cows" for ::1 at 2019-11-25 10:29:49 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"D9JpMfgijJ/UyQFxd9qQZh35Tn339WzSvu5KNJneUVRSRukzO9hlpSScYyOc80DSA/7pbJvK+78gWKXwIIazLQ==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 7485)
+
+
+  
+NoMethodError (undefined method `aliens' for #<Cow:0x00007ffbd95c73d0>
+Did you mean?  alien
+               alien=
+               alias):
+  
+app/controllers/cows_controller.rb:13:in `create'
+Started POST "/cows" for ::1 at 2019-11-25 10:30:02 -0500
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"D9JpMfgijJ/UyQFxd9qQZh35Tn339WzSvu5KNJneUVRSRukzO9hlpSScYyOc80DSA/7pbJvK+78gWKXwIIazLQ==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2444)
+
+
+  
+NoMethodError (undefined method `aliens' for #<Cow:0x00007ffbdb0c48b8>
+Did you mean?  alien
+               alien=
+               alias):
+  
+app/controllers/cows_controller.rb:13:in `create'
+Started POST "/cows" for ::1 at 2019-11-25 10:30:06 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CowsController#create as HTML
+  Parameters: {"authenticity_token"=>"D9JpMfgijJ/UyQFxd9qQZh35Tn339WzSvu5KNJneUVRSRukzO9hlpSScYyOc80DSA/7pbJvK+78gWKXwIIazLQ==", "cow"=>{"name"=>"", "number_of_spots"=>"4", "age"=>"4", "alien_id"=>""}, "commit"=>"Create Cow"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cows_controller.rb:15:in `create'
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/cows_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cows_controller.rb:15:in `create'
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 6082)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 1.3ms | Allocations: 19029)
+
+
+Started GET "/cows" for ::1 at 2019-11-25 10:30:17 -0500
+Processing by CowsController#index as HTML
+  Rendering cows/index.html.erb within layouts/application
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows"[0m
+  ↳ app/views/cows/index.html.erb:5
+  Rendered cows/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6038)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL AND "cows"."id" != ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL AND "cows"."id" != ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCow Load (0.5ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE (alien_id is not null) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.5ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Delia"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Delia"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCow Update (0.5ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 11], ["updated_at", "2019-11-25 15:36:53.721105"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."alien_id" = ? LIMIT ?[0m  [["alien_id", 11], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlien Destroy (0.4ms)[0m  [1m[31mDELETE FROM "aliens" WHERE "aliens"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCow Load (0.1ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Delia"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCow Update (0.3ms)[0m  [1m[33mUPDATE "cows" SET "updated_at" = ?, "alien_id" = ? WHERE "cows"."id" = ?[0m  [["updated_at", "2019-11-25 15:39:12.706396"], ["alien_id", 12], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."alien_id" = ?[0m  [["alien_id", 12]]
+  [1m[36mCow Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cows" WHERE "cows"."id" = ?[0m  [["id", 1]]
+  [1m[36mCow Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cows" WHERE "cows"."id" = ?[0m  [["id", 26]]
+  [1m[36mAlien Destroy (0.1ms)[0m  [1m[31mDELETE FROM "aliens" WHERE "aliens"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Doretta"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCow Update (0.3ms)[0m  [1m[33mUPDATE "cows" SET "updated_at" = ?, "alien_id" = ? WHERE "cows"."id" = ?[0m  [["updated_at", "2019-11-25 15:40:30.299205"], ["alien_id", 13], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAlien Destroy (2.0ms)[0m  [1m[31mDELETE FROM "aliens" WHERE "aliens"."id" = ?[0m  [["id", 13]]
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" WHERE "cows"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCow Load (0.1ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCow Load (0.2ms)[0m  [1m[34mSELECT "cows".* FROM "cows"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Doretta"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.233700"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Hattie"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.235897"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Dedra"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCow Update (0.4ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.237978"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Alicia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.240488"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Ute"], ["id", 6], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.242579"], ["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Suzi"], ["id", 7], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.244579"], ["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Ashlie"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.246330"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Morton"], ["id", 9], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.248352"], ["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Luana"], ["id", 10], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.250416"], ["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Jasper"], ["id", 11], ["LIMIT", 1]]
+  [1m[36mCow Update (0.4ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.252401"], ["id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Tommie"], ["id", 12], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.254651"], ["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Andera"], ["id", 13], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.256334"], ["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Jenniffer"], ["id", 14], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.258211"], ["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Rigoberto"], ["id", 15], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.260057"], ["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Wally"], ["id", 16], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.261845"], ["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Mechelle"], ["id", 17], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.263473"], ["id", 17]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Bill"], ["id", 18], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.265195"], ["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Bill 2"], ["id", 19], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.267071"], ["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Bill 3"], ["id", 20], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.268624"], ["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "asdf"], ["id", 21], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.270390"], ["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "sam"], ["id", 22], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.272432"], ["id", 22]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Sindy"], ["id", 23], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.274492"], ["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "blah"], ["id", 24], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.276576"], ["id", 24]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "steven"], ["id", 25], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.278367"], ["id", 25]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "bessy"], ["id", 27], ["LIMIT", 1]]
+  [1m[36mCow Update (0.5ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.280025"], ["id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "billy"], ["id", 28], ["LIMIT", 1]]
+  [1m[36mCow Update (0.2ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ?, "updated_at" = ? WHERE "cows"."id" = ?[0m  [["alien_id", 14], ["updated_at", "2019-11-25 15:44:11.282932"], ["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cows" WHERE "cows"."alien_id" = ?[0m  [["alien_id", 14]]
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "cows"."alien_id" FROM "cows" WHERE "cows"."alien_id" = ?[0m  [["alien_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Update All (0.8ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ? WHERE "cows"."alien_id" = ?[0m  [["alien_id", nil], ["alien_id", 14]]
+  [1m[36mAlien Destroy (0.1ms)[0m  [1m[31mDELETE FROM "aliens" WHERE "aliens"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCow Load (0.4ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) LIMIT ?[0m  [["name", "thing"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCow Load (0.3ms)[0m  [1m[34mSELECT "cows".* FROM "cows" ORDER BY "cows"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE "cows"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" ORDER BY "aliens"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlien Load (0.1ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCow Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cows" WHERE LOWER("cows"."name") = LOWER(?) AND "cows"."id" != ? LIMIT ?[0m  [["name", "Doretta"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCow Update (0.3ms)[0m  [1m[33mUPDATE "cows" SET "updated_at" = ?, "alien_id" = ? WHERE "cows"."id" = ?[0m  [["updated_at", "2019-11-25 15:47:47.218373"], ["alien_id", 15], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens" WHERE "aliens"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCow Update All (0.4ms)[0m  [1m[33mUPDATE "cows" SET "alien_id" = ? WHERE "cows"."alien_id" = ?[0m  [["alien_id", nil], ["alien_id", 15]]
+  [1m[36mAlien Destroy (0.1ms)[0m  [1m[31mDELETE FROM "aliens" WHERE "aliens"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/about" for ::1 at 2019-11-25 10:53:49 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AgencyController
+Did you mean?  AliensController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2019-11-25 10:54:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'about' could not be found for AgencyController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2019-11-25 10:54:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AgencyController#about as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 2070)
+
+
+  
+ActionController::MissingExactTemplate (AgencyController#about is missing a template for request formats: text/html):
+  
+actionpack (6.0.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.1) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2019-11-25 10:56:24 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 6535)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:57:04 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 136.5ms | Allocations: 176541)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 147ms (Views: 145.2ms | ActiveRecord: 0.0ms | Allocations: 181327)
+
+
+Started GET "/cows" for ::1 at 2019-11-25 10:58:28 -0500
+Processing by CowsController#index as HTML
+  Rendering cows/index.html.erb within layouts/application
+  [1m[36mCow Load (0.8ms)[0m  [1m[34mSELECT "cows".* FROM "cows"[0m
+  ↳ app/views/cows/index.html.erb:8
+  Rendered cows/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 6783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 1.6ms | Allocations: 12552)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:58:30 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 180)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4598)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:58:35 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3928)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:58:36 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 3977)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:58:36 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3921)
+
+
+Started GET "/about" for ::1 at 2019-11-25 10:58:37 -0500
+Processing by AgencyController#about as HTML
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3927)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-11-25 10:59:40 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 6.3ms | Allocations: 4170)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.5ms | Allocations: 932)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 31.2ms | Allocations: 7873)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 0.0ms | Allocations: 10802)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-11-25 11:00:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [30 times] (Duration: 10.7ms | Allocations: 4261)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.2ms | Allocations: 703)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 17.6ms | Allocations: 7656)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 10406)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-11-25 11:01:12 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (Duration: 26.7ms | Allocations: 3232)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 28.8ms | Allocations: 5283)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 7217)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-11-25 11:01:27 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [28 times] (Duration: 4.7ms | Allocations: 3752)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered /Users/sdoran/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6060)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 6935)
+
+
+Started GET "/about?q=bessie" for ::1 at 2019-11-25 11:21:03 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AgencyController#about as HTML
+  Parameters: {"q"=>"bessie"}
+  Rendering agency/about.html.erb within layouts/application
+  Rendered agency/about.html.erb within layouts/application (Duration: 98.8ms | Allocations: 176521)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68413ms (Views: 114.3ms | ActiveRecord: 0.0ms | Allocations: 213258)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 11:30:56 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  Rendered cows/new.html.erb within layouts/application (Duration: 139.8ms | Allocations: 179825)
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.9ms | Allocations: 188813)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+    16:   <%= f.label :age %>
+    17:   <%= f.number_field :age %>
+    18:   <br>
+    19:   <%= f.collection_select @cow, :alien_id, @aliens, :id, :name, prompt: true %>
+    20:   <br>
+    21:   <%= f.submit %>
+    22: <% end %>
+  
+app/views/cows/new.html.erb:19
+app/views/cows/new.html.erb:9
+Started GET "/cows/new" for ::1 at 2019-11-25 11:31:09 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 6550)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 13007)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 11:32:02 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2573)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 7355)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 11:33:52 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  Rendered cows/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3490)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4740)
+
+
+  
+ActionView::Template::Error (undefined method `aliens' for #<Cow:0x00007ffd4aae12b8>
+Did you mean?  alien
+               alien=
+               alias):
+    16:   <%= f.label :age %>
+    17:   <%= f.number_field :age %>
+    18:   <br>
+    19:   <%= f.collection_select :aliens, @aliens, :id, :name, prompt: true %>
+    20:   <br>
+    21:   <%= f.submit %>
+    22: <% end %>
+  
+app/views/cows/new.html.erb:19
+app/views/cows/new.html.erb:9
+Started GET "/cows/new" for ::1 at 2019-11-25 11:34:04 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  Rendered cows/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3108)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3608)
+
+
+  
+ActionView::Template::Error (undefined method `aliens' for #<Cow:0x00007ffd45fea368>
+Did you mean?  alien
+               alien=
+               alias):
+    16:   <%= f.label :age %>
+    17:   <%= f.number_field :age %>
+    18:   <br>
+    19:   <%= f.collection_select :alien_id, @aliens, :id, :name, prompt: true %>
+    20:   <br>
+    21:   <%= f.submit %>
+    22: <% end %>
+  
+app/views/cows/new.html.erb:19
+app/views/cows/new.html.erb:9
+Started GET "/cows/new" for ::1 at 2019-11-25 11:34:06 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.2ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 7411)
+
+
+Started GET "/cows/new" for ::1 at 2019-11-25 11:34:34 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.3ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4790)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 6030)
+
+
+  
+ActionView::Template::Error (undefined method `thing_id' for #<Cow:0x00007ffd45f9ba10>):
+    18:   <br>
+    19:   <%= f.collection_select :alien_id, @aliens, :id, :name, prompt: true %>
+    20:   <br>
+    21:   <%= f.collection_select :thing_id, @aliens, :id, :name, prompt: true %>
+    22:   <br>
+    23:   <%= f.submit %>
+    24: <% end %>
+  
+app/views/cows/new.html.erb:21
+app/views/cows/new.html.erb:9
+Started GET "/cows/new" for ::1 at 2019-11-25 11:35:19 -0500
+Processing by CowsController#new as HTML
+  Rendering cows/new.html.erb within layouts/application
+  [1m[36mAlien Load (0.4ms)[0m  [1m[34mSELECT "aliens".* FROM "aliens"[0m
+  ↳ app/views/cows/new.html.erb:19
+  Rendered cows/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.4ms | Allocations: 7402)
+
+
