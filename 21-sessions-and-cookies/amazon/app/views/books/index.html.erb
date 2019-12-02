@@ -2,12 +2,27 @@
 
 <h1>Books</h1>
 
+
+<h3>Cart: <%= @cart_books.length %></h3>
+<%= button_to 'Empty Cart', { action: 'empty_cart', controller: 'cart' }, method: :delete %>
+
+<ul>
+  <% @cart_books.each do |book|%>
+    <li>
+    <%= book.title %>
+    <%= button_to 'Remove from Cart', { action: 'remove_from_cart', controller: 'cart', id: book.id }, method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Description</th>
       <th>Year</th>
       <th>Page count</th>
       <th colspan="3"></th>
@@ -19,12 +34,12 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
-        <td><%= book.description %></td>
         <td><%= book.year %></td>
         <td><%= book.page_count %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Add to Cart', { action: 'add_to_cart', controller: 'cart', id: book.id } %></td>
       </tr>
     <% end %>
   </tbody>

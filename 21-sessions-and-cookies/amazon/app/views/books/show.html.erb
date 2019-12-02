@@ -1,3 +1,5 @@
+<h1>Counter: <%= session[:counter].length %></h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -5,15 +7,12 @@
   <%= @book.title %>
 </p>
 
-<p>
+<% if session[:counter].length <= 5 %>
+  <p>
   <strong>Author:</strong>
   <%= @book.author %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
 
 <p>
   <strong>Year:</strong>
@@ -24,6 +23,17 @@
   <strong>Page count:</strong>
   <%= @book.page_count %>
 </p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+<% else %>
+  <p>🤡 Sorry, you've exceeded your max views 😭</p>
+<% end %>
+
+
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

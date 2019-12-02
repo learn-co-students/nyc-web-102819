@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   resources :books
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  post '/cart', to: 'cart#add_to_cart', as: 'cart'
+  delete '/cart', to: 'cart#remove_from_cart'
+  delete '/empty_cart', to: 'cart#empty_cart'
 end

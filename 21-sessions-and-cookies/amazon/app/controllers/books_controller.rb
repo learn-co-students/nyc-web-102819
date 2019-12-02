@@ -2,10 +2,14 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
+    @cart_books = Book.where(id: session[:cart])
     @books = Book.all
   end
 
   def show
+    
+    session[:counter] ||= []
+    session[:counter].push(params[:id]) unless session[:counter].include?(params[:id])
   end
 
   def new
