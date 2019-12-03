@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      User id: <%= current_user.id %>
+    <% end %>
+    
+    <br>
+    <nav>
+      <% if logged_in? %>
+        <%= link_to "Log Out", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log In", login_path %>
+      <% end %>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

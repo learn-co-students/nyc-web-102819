@@ -1,0 +1,15 @@
+<h1>🧟‍♀️ Log In to your Music Catalog 🤡</h1>
+
+<% if flash[:message] %>
+  <h3>❌ <%= flash[:message] %></h3>
+<% end %>
+
+<%= form_tag login_path do %>
+  <%= label_tag 'Username' %>
+  <%= text_field_tag :username %>
+  <br>
+  <%= label_tag 'Password' %>
+  <%= password_field_tag :password %>
+  <br>
+  <%= submit_tag "Log In" %>
+<% end%>

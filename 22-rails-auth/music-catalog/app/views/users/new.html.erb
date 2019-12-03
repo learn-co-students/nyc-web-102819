@@ -1,0 +1,19 @@
+<h1>🎹 Sign Up for your Very Own Music Catalog 🎶</h1>
+
+<% if flash[:message] %>
+  <h3>❌ <%= flash[:message] %></h3>
+<% end %>
+
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit "Create Account" %>
+<% end %>
