@@ -2,13 +2,13 @@
 
 ## Objectives
 
-* Discuss what CSS does and why it's important
-* Cover the basics of HTML
-* Differentiate between inline, internal, and external stylesheets
-* Demonstrate the anatomy of a declaration block
-* Understand how to use class, id, and element selectors, and selector order of importance
-* Demonstrate the use of the box model, positioning, flex box, CSS grid in page layout
-* Introduce CSS Frameworks like Bootstrap, Semantic UI, Materialize
+* [ ] Discuss what CSS does and why it's important
+* [ ] Cover the basics of HTML
+* [ ] Differentiate between inline, internal, and external stylesheets
+* [ ] Demonstrate the anatomy of a declaration block
+* [ ] Understand how to use class, id, and element selectors, and selector order of importance
+* [ ] Demonstrate the use of the box model, positioning, flex box, CSS grid in page layout
+* [ ] Introduce CSS Frameworks like Bootstrap, Semantic UI, Materialize
 
 ![](https://media.giphy.com/media/it6W8D4FfvaPC/giphy.gif)
 
