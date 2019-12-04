@@ -1,0 +1,47 @@
+body {
+  background-color:skyblue;
+}
+
+h1 {
+  color:orchid;
+  font-weight: bolder;
+  font-family: 'Sulphur Point', Arial, sans-serif; 
+}
+
+#welcome {
+  background-color: lawngreen;
+  border: dotted purple 10px;
+  padding: 25px;
+  margin: 50px;
+}
+.about {
+  color: navy;
+  font-style: italic;
+  font-family: 'Indie Flower', cursive;
+}
+
+#buttons {
+  color:tomato;
+  font-style: italic;
+}
+
+#buttons button {
+ color: green; 
+}
+
+nav {
+  background-color: snow;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+article {
+  font-family: 'Bitter', serif; 
+}
+
+/* 
+font-family: 'Sulphur Point', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Bitter', serif; */
