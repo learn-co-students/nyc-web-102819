@@ -73,11 +73,16 @@
 
 - READ:
 
-- `document.getElementById`
-- `node.querySelector`
+- `node.getElementById`
+  - an element that is a child of the chosen `node` that has the id given as an argument
 - `node.getElementsByTagName`
-- `node.getElementsByClassName('btn-small')`
+  - all elements that are children of the chosen `node` who's `tagName` matches the argument
+- `node.getElementsByClassName`
+  - all elements that are children of the chosen `node` who's `className` matches the argument
+- `node.querySelector`
+  - the first element that is a child of the chosen `node` that matches the argument
 - `node.querySelectorAll`
+  - the all elements that are children of the chosen `node` that matches the argument
   - We can also combine selectors for more specificity:
     - We need a space between `#parent .child`
     - We can chain selectors `div.image.highlighted`
@@ -97,6 +102,7 @@
 - DELETE:
 
 - `node.removeChild(childNode)`
+  - remove the child passed into the argument from the `node` that the method is being called on 
 - `node.remove()`
 
 ---
