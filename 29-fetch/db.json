@@ -1,0 +1,46 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "score": "14",
+      "title": "Merry Christmas",
+      "image": "https://media.pitchfork.com/photos/5ddbf1586133160008c6461a/1:1/w_320/mariahdeluxe.jpg",
+      "artist": "Mariah Carey"
+    },
+    {
+      "id": 2,
+      "score": "6",
+      "title": "Christmas & Chill",
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/06/Christmas_and_Chill.jpg",
+      "artist": "Ariana Grande"
+    },
+    {
+      "id": 3,
+      "score": 0,
+      "title": "Michael Buble Christmas",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71UTGwpfwwL._SY355_.jpg",
+      "artist": "Michael Buble"
+    },
+    {
+      "id": 4,
+      "score": 0,
+      "title": "Cee Lo's Magic Moment",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61xGTeDZdwL.jpg",
+      "artist": "Cee Lo Green"
+    },
+    {
+      "id": 5,
+      "score": 0,
+      "title": "Home For Christmas",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Home_for_Christmas.png/220px-Home_for_Christmas.png",
+      "artist": "N'Sync"
+    },
+    {
+      "title": "Charlie Brown XMas",
+      "artist": "mad people",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71vaEND0faL._SY355_.jpg",
+      "score": 0,
+      "id": 6
+    }
+  ]
+}
