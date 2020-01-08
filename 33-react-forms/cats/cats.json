@@ -1,0 +1,141 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "age": 10,
+      "name": "Caryn",
+      "description": "I type with the fury of a thousand cats.",
+      "image": "https://media0.giphy.com/media/aNqEFrYVnsS52/giphy.gif"
+    },
+    {
+      "id": 2,
+      "age": 10,
+      "name": "Danny",
+      "description": "Danny is a loyal and friendly boi. He loves scratches but maintains his independence. He also has a very weird meow and is very regal.",
+      "image": "photos/danny.png",
+      "favorite": true,
+      "match": true
+    },
+    {
+      "id": 3,
+      "age": 10,
+      "name": "Abbi",
+      "description": "Abby is a r*t b*st*rd. She is very mean and very unsociable. But she's nice to look at so it's fine.............",
+      "image": "photos/abbi.png",
+      "favorite": false,
+      "match": false
+    },
+    {
+      "id": 4,
+      "age": 10,
+      "name": "Teddy",
+      "description": "Teddy is objectively the cutest cat anyone will ever encounter. He starts crying anytime he finds himself alone and will scratch at your door when he wants to hang. He loves chewing on things, boxes or bags of any sort, and fighting.",
+      "image": "photos/teddy.png",
+      "favorite": true,
+      "match": false
+    },
+    {
+      "id": 5,
+      "age": 10,
+      "name": "Paulina",
+      "description": "Paulina is the sweetest cat ever. All she ever wants is to be held (and eat). She loves to lick her owner’s face and snarls when nobody is giving her any attention. She is very kind but tired so she never wants to fight her siblings but she will let you know when you are pissing her off. Sidenote: whenever you pick her up she sneezes (no clue why)",
+      "image": "photos/paulina.png",
+      "favorite": true,
+      "match": true
+    },
+    {
+      "id": 6,
+      "age": 10,
+      "name": "Lucky",
+      "description": "A big beautiful boy. Endlessly curious (as long as it’s not past the stairwell). Loves plastic bags, Netflix sci fi marathons, and plotting its owners demise.",
+      "image": "photos/lucky.jpg",
+      "favorite": false,
+      "match": true
+    },
+    {
+      "id": 7,
+      "age": 10,
+      "name": "Jon Snow",
+      "description": "Jon is the King in the Norf. He knows nothing and is looking for a cat to show him what is on the other side of the wall.",
+      "image": "photos/snow.jpg",
+      "favorite": true,
+      "match": false
+    },
+    {
+      "id": 8,
+      "age": 10,
+      "name": "Mojo",
+      "description": "Mojo is the sweetest little fat boy in the world. He had the resistance beaten out of him by loving small children and now he just wants to be loved... and head bump you for food at 5am.",
+      "image": "photos/mojo.jpg",
+      "favorite": true,
+      "match": true
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "catId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "catId": 1
+    },
+    {
+      "id": 3,
+      "body": "some comment",
+      "catId": 2
+    },
+    {
+      "id": 4,
+      "body": "some comment",
+      "catId": 4
+    },
+    {
+      "id": 5,
+      "body": "some comment",
+      "catId": 8
+    },
+    {
+      "id": 6,
+      "body": "some comment",
+      "catId": 7
+    },
+    {
+      "body": "hey danny whats up ",
+      "catId": 2,
+      "id": 7
+    },
+    {
+      "body": "message 3",
+      "catId": 2,
+      "id": 8
+    },
+    {
+      "body": "message 4",
+      "catId": 2,
+      "id": 9
+    },
+    {
+      "body": "message 5",
+      "catId": 2,
+      "id": 10
+    },
+    {
+      "body": "soemone give me a better message",
+      "catId": 2,
+      "id": 11
+    },
+    {
+      "body": "pretty please",
+      "catId": 2,
+      "id": 12
+    },
+    {
+      "body": "so cute",
+      "catId": 4,
+      "id": 13
+    }
+  ]
+}
