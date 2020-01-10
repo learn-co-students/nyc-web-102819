@@ -13,6 +13,15 @@ class CatView extends React.Component {
     meow = new Audio(meow)
     mad = new Audio(mad)
     
+    componentDidMount(){
+        this.meow.play()
+    }
+    
+    componentWillUnmount(){
+        this.mad.play()
+    }
+
+    
     handleSubmit = (e) => {
         e.preventDefault();
 

@@ -11,6 +11,16 @@ class App extends React.Component {
     allCats: [],
     view: 'all'
   }
+  
+  componentDidMount(){
+    fetch('http://localhost:3001/cats')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        this.setState({ allCats: data  }) // persist them in the frontend on our state! 
+        // what do i do with my data 
+      })
+  }
 
   handleSelector = (e) => { // handleClick('all')
     this.setState({ view: e.target.id })
@@ -27,18 +37,6 @@ class App extends React.Component {
           this.setState({ selectedCat: data })
         })
     }
-  }
-
-  loadCats = () => {
-    // do some fancy fetch thangs
-    console.log('inside load cats')
-    fetch('http://localhost:3001/cats')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        this.setState({ allCats: data  }) // persist them in the frontend on our state! 
-        // what do i do with my data 
-      })
   }
 
   render() {
@@ -59,7 +57,6 @@ class App extends React.Component {
         <div id="main"> 
           <SelectorBar 
             selectCat={this.selectCat} 
-            loadCats={this.loadCats}
             view={this.state.view}
             handleSelector={this.handleSelector}/>
           <div id="cat-container">

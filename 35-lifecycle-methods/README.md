@@ -2,10 +2,10 @@ Component Lifecycle Methods
 ===========================
 
 ## SWBATs
-- [ ] Write methods that interact with data at different points throughout a component's life
-- [ ] Identify the most-used Lifecycle Methods
-- [ ] Explain why we `fetch` data using `componentDidMount`
-- [ ] Identify problems caused by asynchronicity in React
+- [X] Write methods that interact with data at different points throughout a component's life
+- [X] Identify the most-used Lifecycle Methods
+- [X] Explain why we `fetch` data using `componentDidMount`
+- [X] Identify problems caused by asynchronicity in React
 
 ## Lecture Notes
 
