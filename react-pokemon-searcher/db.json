@@ -7382,6 +7382,34 @@
         }
       ],
       "id": 210
+    },
+    {
+      "name": "newest",
+      "sprites": {
+        "front": "lksjdlf",
+        "back": "lksjdflk"
+      },
+      "stats": [
+        {
+          "name": "hp",
+          "value": 1000
+        }
+      ],
+      "id": 211
+    },
+    {
+      "name": "newmovestate",
+      "sprites": {
+        "front": "nokn",
+        "back": "nono"
+      },
+      "stats": [
+        {
+          "name": "hp",
+          "value": 10000
+        }
+      ],
+      "id": 212
     }
   ]
 }
