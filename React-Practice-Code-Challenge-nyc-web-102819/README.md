@@ -39,10 +39,18 @@ Inspectors will be coming by to check that our patented Sushi Saga conveyor belt
 
 1. Sushi list is properly received from the server
 2. Only 4 sushi are rendered at a time
+     - render all ze sushi
+     - paginate sushi
 3. Clicking the "More Sushi!" button shows the next set of 4 sushi in the list. For this assignment, you don't have to be concerned about what happens when you reach the end of the sushi list.
 4. Clicking a sushi on a plate will eat the sushi, causing it to be removed from its plate and an empty plate to appear on the table.
+    - onClick remove image from plate
+    - onClick add empty plate to table 
 5. We need to make money! Whenever a sushi is eaten, customers should be automatically charged! Based on a budget decided by you, the developer, the amount of money remaining should go down by the cost of the sushi that was eaten. There is a spot to display this number in the `Table` component
+    - decide where to put money to track it
+    - display that
+    - onClick reduce amount of money
 6. No free meals! Customers cannot eat any sushi that exceeds the amount of money remaining in their balance
+    - onClick IF they have enough money
 
 ### Bonus
 
@@ -53,3 +61,14 @@ If and only if you have time, you may work on the following:
 3. Anything else!
 
 **Note:** If at the end of the challenge you have achieved all the functionality required but the style looks off, this is okay!
+
+
+
+
+### Sticking points, questions, etc.
+- no free meals was a sticking point ==>  where should that logic be? 
+- empty plate appearing on table 
+- when you click more, previously empty plate stays empty ===> key! 
+- GENERAL: location of logic? 
+- GENERAL: when to use anonymous functions and passing values there? 
+    - setting state and hitting infinite loops... invoke by accident?
