@@ -4,8 +4,15 @@ import { API_BASE } from '../constants';
 
 class MoviePage extends React.Component {
   state = {
-    addingReview: false
+    addingReview: false,
+    movie: null
   }
+
+  // componentDidMount(){
+  //   fetch(`${API_BASE}/movies/${this.props.match.params.id}`)
+  //     .then(res => res.json())
+  //     .then(data => this.setState({ movie: data }))
+  // }
 
   toggleNewReviewForm = () => {
     this.setState((prevState) => ({ addingReview: !prevState.addingReview }))
@@ -49,11 +56,13 @@ class MoviePage extends React.Component {
   }
 
   render() {
-    let selectedMovie = this.props.selectedMovie;
+    console.log('MOVIE PAGE PROPS',this.props)
+    let movieId = this.props.match.params.id;
+    let selectedMovie = this.props.movies.find(movie => movie.id == movieId)
 
     return (
       <div className="movie-page">
-          <div className="back-button">⬅️</div>
+          <div onClick={() => this.props.history.goBack()} className="back-button">⬅️</div>
           {/* make sure selectedMovie isn't null before you try to render anything */}
           {selectedMovie && this.renderMovieInfo(selectedMovie)} 
       </div>

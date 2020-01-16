@@ -9,10 +9,15 @@ React Router
 - [ ] Use `push` and `history` to navigate pages
 - [ ] Create dynamic routes and use `params`
 - [ ] Make the distinction between `state` being one _Single Source of Truth_ and `react-router` being another _Single Source of Truth_
-- [ ] **BONUS** Use `Redirect`to navigate pages
+- [ ] **HOMEWORK** Use `Redirect` to navigate pages
 
 
-Features
+## Movie Review Fullstack 
+### Setup 
+- Run frontend: `npm start` 
+- Run backend: `rails s -p 3001`
+
+### Features
 - [MovieApp Wireframe and Component Hierarchy](https://awwapp.com/b/ui0yjws5o/)
 - [ ] different routes for main movie view and login 
 - [ ] dynamic routing for individual movie view
@@ -20,29 +25,34 @@ Features
 ## Lecture Notes
 - [Example with All of Ze Routes](https://github.com/sbal13/Project_Athena_client/blob/master/src/App.js)
 
-## Benefits of SPAs
-- speed ==> one big request at the beginning and no further requests 
-- user perspective instant gratification (don't have to get redirected)
+## Dynamic Routing from Rails
+"/movies/:id"  ====> Movie Page 
+"/movies" ====> Movie Cards
+"/login" ===> Login
+"/signup" ===> Signup
 
-## Issues of SPAs
-- analytics are hard to track (ie which pages users are visiting)
-- first load can take a while 
-- organizational issues. Routes clearly define what you're accessing where
-    - accessibility! 
-- sharing and navigation! can't do it.
-    - go check out "Joker". Go to localhost(or where its hosted) and then follow your instrucftions to get to Joker. 
+## SPAs
 
-## Dyanmic Routing
-/users/:id
+## Great Things
+- supa fast user experience 
+- data is centralized 
 
-"/"
-"/signup"
-"/movies"
-"/login"
-"/movies/:id"
+## Struggles 
+- initial load can be super slow 
+- page navigation ===> back doesn't work, 
+- can't analyze traffic to various views / pages 
+- can't bookmark or share specific pages 
+- SEO (search engine optimization) 
+- require state management 
+
+### Component Notation vs Render Notation
+Component Notation just takes a component name and automatically adds the routerProps as props to it (history, location, match)
+
+Render Notation takes a callback that returns a component, written as JSX. We do this so we can pass our own props.
+if you need routerProps, need to explicitly pass to your component
+
 
 ## Parking Lot
-- Component vs Render notation efficiency
 
 
 ### Using React Router
