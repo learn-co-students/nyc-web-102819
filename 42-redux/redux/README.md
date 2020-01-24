@@ -32,6 +32,35 @@ Redux **will** test your JavaScript knowledge to the **MAX**!!!
 
 
 ## Lecture Notes
+- GitLens extension
+- EXPLORE THUNK FOR ASYNC IF YOU WANT. we'll get to it mod5
+
+
+
+### Message Passing
+- type ==> controls what behavior will be called / which case of switch statement
+- payload ===> the data we might need to call that behavior 
+- centralized function 
+- access to the previous state ==> what are you changing?? what's your old or default case??
+
+
+
+
+
+### Questions from labs & reading
+- is it it's own library? ==> yes but made with vanilla JS
+- is it standard to write out the dispatch function on its own? 
+     why can't you make state persist and then render in the reducer? ===> theoretically today
+- what is "store"? follow ups why not just call it state? omegaState ====> won't go into this week (combineReducers)
+- reducers, dispatch. all the ze language 
+- dan abramov (da man). using tools to check if state has been mutated (deepFreeze) ===> next level. when comfy w/ redux proceed
+- what are hooks? ===> mod5 lecture on hooks *************
+
+
+
+### Parking Lot 
+- forcing sync setState. generally probably async/await
+
 
 
 
@@ -44,14 +73,14 @@ Redux **will** test your JavaScript knowledge to the **MAX**!!!
 Message passing is built on the idea of centralization of program flow: all program flows pass through **one** central function, which in turn invokes the desired functionality. In order to do this, the central function needs to be told 2 things: **a type** which tells the central function which function to call, and, because functions sometimes need data, **a payload** which contains all of the data needed to run the desired function (usually an object).
 
 ### Vocabulary
-- [ ] Redux 
-- [ ] store 
-- [ ] reducer 
-- [ ] getState() 
-- [ ] dispatch() 
-- [ ] action  
-- [ ] type 
-- [ ] payload 
+- [ ] Redux - state management (library) (best) for large programs
+- [ ] store - object that serves as the ultimate source of truth for the app. like a cloud. and has getState and dispatch methods 
+- [ ] reducer - case switch that returns the new version of state 
+- [ ] getState() - current version of the store. READ
+- [ ] dispatch() - a function that takes an arg of an action and calls the reducer (and updates our store)
+- [ ] action - object that has a key of type and maybe payload and determines the reducer behavior
+- [ ] type - command! a string
+- [ ] payload - data! optional
 
 ### React Redux
 - [ ] mapStateToProps()
