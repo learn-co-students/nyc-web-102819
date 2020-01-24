@@ -1,9 +1,15 @@
 
+ function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+  }
+
 let defaultState = {
-    likes: 0,
-    text: "",
-    darkMode: false,
-    thangs: []
+    likes: 2000,
+    text: "Dolla Dolla Bills Yall",
+    darkMode: true,
+    thangs: ['benjamins baby'],
+    color: random_rgba()
   }
 
 let reducer = (prevState=defaultState, action) => {
@@ -20,6 +26,8 @@ let reducer = (prevState=defaultState, action) => {
           return {...prevState, text: action.payload.text }
         case 'ADD_TEXT': 
           return {...prevState, text: "", thangs: [...prevState.thangs, prevState.text] }
+        case 'RAINBOW':
+            return {...prevState, color: random_rgba()}
         default: 
           return {...prevState}
     }
